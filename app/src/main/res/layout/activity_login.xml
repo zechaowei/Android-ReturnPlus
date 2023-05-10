@@ -4,13 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.LoginActivity">
+    tools:context=".login.LoginActivity"
+    android:padding="20dp">
+
+    <!--设置头像-->
+    <ImageView
+        android:id="@+id/people"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icon_people"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <!--设置用户栏-->
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/people"
+        android:layout_marginTop="80dp"
+        android:hint="用户名"
+        android:textSize="20sp"
+        android:textColor="#FFAD33"
+        android:maxLines="1"
+        android:drawableLeft="@drawable/icon_login_user"
+        android:background="@drawable/frame_login"/>
+
+    <!--密码栏-->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/username"
+        android:layout_marginTop="40dp"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:textColor="#FFAD33"
+        android:maxLines="1"
+        android:drawableLeft="@drawable/icon_login_password"
+        android:background="@drawable/frame_login"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginTop="80dp"
+        android:text="登录"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:background="@drawable/btn_press"/>
+
+    <CheckBox
+        android:id="@+id/auto_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_marginTop="20sp"
+        android:text="自动登录"
+        android:textSize="15sp" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="这是登录界面"
-        android:textSize="50sp"
-        android:gravity="center"/>
+        android:id="@+id/tvForgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="忘记密码?"
+        android:textSize="15sp"
+        android:textColor="@color/blue"
+        android:layout_alignRight="@+id/btn_login"
+        android:layout_alignBaseline="@+id/auto_login"/>
 
 </RelativeLayout>
