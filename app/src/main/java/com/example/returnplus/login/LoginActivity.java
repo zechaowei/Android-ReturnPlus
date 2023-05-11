@@ -11,7 +11,7 @@ import com.example.returnplus.R;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private TextView tvForgetPassword;
+    private TextView ForgetPassword;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 
         //找到忘记密码这个按钮
-        tvForgetPassword = findViewById(R.id.tvForgetPassword);
+        ForgetPassword = findViewById(R.id.tvForgetPassword);
 
 
         //设置布局文件
@@ -30,7 +30,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
 //        //设置点击忘记密码时跳转到对应网站，例如http://www.baidu.coms
-//        tvForgetPassword.setText(Html.fromHtml("<a href=\"http://www.baidu.com\">忘记密码？</a>"));
-//        tvForgetPassword.setMovementMethod(LinkMovementMethod.getInstance());
+//
+//        ForgetPassword.setText(Html.fromHtml("<a href=\"http://wwww.baidu.com\">忘记密码？</a>"));
+//        ForgetPassword.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }

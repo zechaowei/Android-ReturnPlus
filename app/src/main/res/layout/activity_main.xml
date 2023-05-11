@@ -6,13 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#D6FD51"
+        app:tabTextColor="#3366CC"
+        app:tabIndicatorColor="#000000"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <!--设置ViewPager页面-->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_weight="1"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck">
+
+    </androidx.viewpager.widget.ViewPager>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
