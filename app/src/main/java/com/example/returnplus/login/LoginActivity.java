@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("LoginActivity","按钮被点击了，准备登录....");
+                Log.i("LoginActivity", "按钮被点击了，准备登录....");
 
 
                 String username = userName.getText().toString();
@@ -56,15 +56,15 @@ public class LoginActivity extends AppCompatActivity {
 
                 //TODO 将用户名和密码发送到后段验证
                 //admin 12346    userName.getText()---->Editable类型
-                if (username ==null ||"".equals(username)){
+                if (username == null || "".equals(username)) {
                     userName.setError("用户名不能为空");
                     return;
                 }
-                if (password == null || "".equals(password)){
+                if (password == null || "".equals(password)) {
                     passWord.setError("密码不能为空");
                     return;
                 }
-                if (!"admin".equals(username) || !"123456".equals(password)){
+                if (!"admin".equals(username) || !"123456".equals(password)) {
                     userName.setError("用户名或密码不正确");
                     return;
                 }
@@ -82,7 +82,6 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
-
 //        //设置点击忘记密码时跳转到对应网站，例如http://www.baidu.coms
 //        tvForgetPassword.setText(Html.fromHtml("<a href=\"http://wwww.baidu.com\">忘记密码？</a>"));
 //        tvForgetPassword.setMovementMethod(LinkMovementMethod.getInstance());
@@ -90,8 +89,8 @@ public class LoginActivity extends AppCompatActivity {
 
     //自动登录的保存
     private void saveAutoLogin() {
-        if (autoLogin.isChecked()){
-            Log.d("LoginActivity","自动登录");
+        if (autoLogin.isChecked()) {
+            Log.d("LoginActivity", "自动登录");
 
             String username = userName.getText().toString();
             String password = passWord.getText().toString();
@@ -101,15 +100,15 @@ public class LoginActivity extends AppCompatActivity {
             SharedPreferences.Editor edit = sp.edit();
 
             //将数据写入到内存当中
-            edit.putString("username",username);
-            edit.putString("password",password);
+            edit.putString("username", username);
+            edit.putString("password", password);
 
             //将数据写入到文件中
             edit.commit();
 
-        }else {
+        } else {
             //打印日志，可以不用
-            Log.d("LoginActivity","非自动登录");
+            Log.d("LoginActivity", "非自动登录");
         }
     }
 }

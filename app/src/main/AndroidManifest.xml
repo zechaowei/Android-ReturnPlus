@@ -41,7 +41,8 @@
             android:label="关于我们"/>
         <activity
             android:name=".home.HomeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="home页面"/>
         <activity
             android:name=".login.LoginActivity"
             android:exported="false" />

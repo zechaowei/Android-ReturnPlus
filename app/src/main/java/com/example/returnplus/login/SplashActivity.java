@@ -27,10 +27,9 @@ public class SplashActivity extends AppCompatActivity {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 
 
-
         setContentView(R.layout.activity_splash);
         //设置3秒后
-        handler.sendEmptyMessageDelayed(0,3000);
+        handler.sendEmptyMessageDelayed(0, 3000);
     }
 
 
@@ -43,23 +42,23 @@ public class SplashActivity extends AppCompatActivity {
         }
     };
 
-    public void getHome(){
+    public void getHome() {
 
         //判断在SharedPreferences中存在登录信息，则跳转到MainActivity，否则跳转动LoginActivity
         //MODE_PRIVATE默认模式，创建的文件只能由应用程序调用，即为私有的
         SharedPreferences sp = getSharedPreferences("AUTO_LOGIN", Context.MODE_PRIVATE);
-        String username = sp.getString("username","");
-        String password = sp.getString("password","");
+        String username = sp.getString("username", "");
+        String password = sp.getString("password", "");
 
 
         //TODO 应该判断Token，目前没有网络请求的功能，暂时使用判断用户名、密码代替
         Intent intent = null;
-        if(username != null && username.length() > 0
-            && password != null && password.length() > 0
-        ){
+        if (username != null && username.length() > 0
+                && password != null && password.length() > 0
+        ) {
             //MainActivity
             intent = new Intent(this, MainActivity.class);
-        }else {
+        } else {
             //LoginActivity
             intent = new Intent(this, LoginActivity.class);
         }

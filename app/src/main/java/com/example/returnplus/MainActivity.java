@@ -3,7 +3,6 @@ package com.example.returnplus;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     List<Fragment> fragments = new ArrayList<>();
-    String tabTitles[] = {"心间广场","心理咨询","心理知识","心理小憩"};
+    String tabTitles[] = {"心间广场", "心理咨询", "心理知识", "心理小憩"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         //设置后退按钮
         assert actionBar != null;
-        actionBar.setDisplayHomeAsUpEnabled(true);	//实际上是在菜单项目上显示菜单（在左边显示）
+        actionBar.setDisplayHomeAsUpEnabled(true);    //实际上是在菜单项目上显示菜单（在左边显示）
         //设置actionBar的左边图标，设置为自定义图标
         actionBar.setHomeAsUpIndicator(R.drawable.icon_home);
 
@@ -101,8 +100,8 @@ public class MainActivity extends AppCompatActivity {
     //重写方法，监听菜单中的选项
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == android.R.id.home){
-            Toast.makeText(this,"跳转到Home页",Toast.LENGTH_SHORT).show();
+        if (item.getItemId() == android.R.id.home) {
+//            Toast.makeText(this, "跳转到Home页", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
             //启动意图
             startActivity(intent);

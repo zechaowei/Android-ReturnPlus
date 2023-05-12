@@ -5,18 +5,24 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.returnplus.MainActivity;
 import com.example.returnplus.R;
 import com.example.returnplus.login.LoginActivity;
 
-public class HomeActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+/**
+ * Home页面
+ */
+public class HomeActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private ListView lv_home;
     private ArrayAdapter adapter;
@@ -26,7 +32,13 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
 
         //去掉标题行
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+//        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        //设置ActionBar
+        ActionBar actionBar = getSupportActionBar();
+        //设置后退按钮
+        assert actionBar != null;
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         setContentView(R.layout.activity_home);
 
@@ -52,9 +64,9 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
      * ListView条目点击事件
      * <p>
      * String[] datas = new String[]{
-     *      "页面1", "页面2", "页面3",
-     *      "页面4", "页面5", "页面6",
-     *      "页面7", "页面8", "页面9"
+     * "页面1", "页面2", "页面3",
+     * "页面4", "页面5", "页面6",
+     * "页面7", "页面8", "页面9"
      * };
      *
      * @param parent
@@ -102,7 +114,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         }
 
         //如果是退出登录，需要结束当前Activity
-        if (position == 7){
+        if (position == 7) {
             finish();
         }
         startActivity(intent);
@@ -116,5 +128,16 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         SharedPreferences.Editor edit = sp.edit();
         edit.clear();
         edit.commit();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+//            Toast.makeText(this,"跳转到Main页",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+            //启动意图
+            startActivity(intent);
+        }
+        return true;
     }
 }
