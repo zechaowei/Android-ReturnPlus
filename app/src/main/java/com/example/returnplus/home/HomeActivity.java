@@ -25,10 +25,8 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         //去掉标题行
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
-
 
         setContentView(R.layout.activity_home);
 
@@ -48,7 +46,6 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         lv_home.setAdapter(adapter);
 
         lv_home.setOnItemClickListener(this);
-
     }
 
     /**
@@ -110,7 +107,6 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         startActivity(intent);
     }
-
 
     /**
      * 清空配置文件
