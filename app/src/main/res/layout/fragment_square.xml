@@ -5,31 +5,26 @@
     android:orientation="vertical"
     android:background="@drawable/heart_square">
 
-    <ImageButton
+
+    <Button
         android:id="@+id/btn_bubble"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="350dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/icon_bubble_64"
-        android:contentDescription="泡泡"
-        android:padding="30dp" />
+        android:layout_alignParentTop="true"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/btn_diary"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_below="@+id/btn_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/icon_diary_64"
-        android:contentDescription="日记本"
-        android:padding="30dp"/>
+        android:layout_below="@+id/btn_bubble"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/btn_discussion"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_below="@+id/btn_diary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/icon_discussion_64"
-        android:contentDescription="讨论"
-        android:padding="30dp"/>
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

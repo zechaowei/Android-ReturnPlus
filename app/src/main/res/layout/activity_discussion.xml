@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".DiscussionActivity">
 
+    <TextView
+        android:id="@+id/tv_discussion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="讨论广场"
+        android:textSize="40sp"
+        android:gravity="center"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

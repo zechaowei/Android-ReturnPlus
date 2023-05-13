@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".BubbleActivity">
 
+    <TextView
+        android:id="@+id/tv_bubble"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="泡泡广场"
+        android:textSize="40sp"
+        android:gravity="center"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

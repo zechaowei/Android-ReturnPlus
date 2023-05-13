@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".DiaryActivity">
 
+    <TextView
+        android:id="@+id/tv_diary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="日记广场"
+        android:textSize="40sp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
