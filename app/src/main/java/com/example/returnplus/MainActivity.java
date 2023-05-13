@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
     List<Fragment> fragments = new ArrayList<>();
     String tabTitles[] = {"心间广场", "心理咨询", "心理知识", "心理小憩"};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_main);
-
         //设置选项卡
         tabLayout = findViewById(R.id.tab);
         viewPager = findViewById(R.id.viewPager);

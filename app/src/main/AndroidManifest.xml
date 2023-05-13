@@ -12,37 +12,46 @@
         android:theme="@style/Theme.ReturnPlus"
         tools:targetApi="31">
         <activity
+            android:name=".DiscussionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DiaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BubbleActivity"
+            android:exported="false" />
+        <activity
             android:name=".home.SettingsActivity"
             android:exported="false"
-            android:label="设置"/>
+            android:label="设置" />
         <activity
             android:name=".home.RewardsActivity"
             android:exported="false"
-            android:label="积分兑换"/>
+            android:label="积分兑换" />
         <activity
             android:name=".home.PersonActivity"
             android:exported="false"
-            android:label="个人主页"/>
+            android:label="个人主页" />
         <activity
             android:name=".home.MessageActivity"
             android:exported="false"
-            android:label="个人信息"/>
+            android:label="个人信息" />
         <activity
             android:name=".home.MedicineActivity"
             android:exported="false"
-            android:label="吃药小提醒"/>
+            android:label="吃药小提醒" />
         <activity
             android:name=".home.SignActivity"
             android:exported="false"
-            android:label="签到"/>
+            android:label="签到" />
         <activity
             android:name=".home.AboutActivity"
             android:exported="false"
-            android:label="关于我们"/>
+            android:label="关于我们" />
         <activity
             android:name=".home.HomeActivity"
             android:exported="false"
-            android:label="home页面"/>
+            android:label="home页面" />
         <activity
             android:name=".login.LoginActivity"
             android:exported="false" />

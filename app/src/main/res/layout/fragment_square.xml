@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/heart_square">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="心间广场"
-        android:textSize="50sp"
-        android:gravity="center"
-        android:background="#FF00FF"/>
+    <ImageButton
+        android:id="@+id/btn_bubble"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="350dp"
+        android:background="@drawable/icon_bubble_64"
+        android:contentDescription="泡泡"
+        android:padding="30dp" />
 
-</LinearLayout>
+    <ImageButton
+        android:id="@+id/btn_diary"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_below="@+id/btn_bubble"
+        android:background="@drawable/icon_diary_64"
+        android:contentDescription="日记本"
+        android:padding="30dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_discussion"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_below="@+id/btn_diary"
+        android:background="@drawable/icon_discussion_64"
+        android:contentDescription="讨论"
+        android:padding="30dp"/>
+
+</RelativeLayout>
