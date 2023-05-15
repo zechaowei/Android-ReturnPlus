@@ -3,7 +3,7 @@
     <style name="Theme.ReturnPlus" parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
         <!-- Primary brand color. -->
 <!--        修改标题栏的颜色-->
-        <item name="colorPrimary">#59F436</item>
+        <item name="colorPrimary">#71A3B1</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->

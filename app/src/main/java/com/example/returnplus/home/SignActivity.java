@@ -3,6 +3,9 @@ package com.example.returnplus.home;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -14,6 +17,8 @@ import com.example.returnplus.R;
  * 签到页面
  */
 public class SignActivity extends AppCompatActivity {
+    
+    private Button btn_sign;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +31,15 @@ public class SignActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         setContentView(R.layout.activity_sign);
+        
+        btn_sign = findViewById(R.id.btn_sign);
+        
+        btn_sign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SignActivity.this, "签到成功", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

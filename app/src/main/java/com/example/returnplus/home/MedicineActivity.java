@@ -28,6 +28,11 @@ public class MedicineActivity extends AppCompatActivity {
         setContentView(R.layout.activity_medicine);
     }
 
+    /**
+     * 返回到home页面
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == android.R.id.home) {

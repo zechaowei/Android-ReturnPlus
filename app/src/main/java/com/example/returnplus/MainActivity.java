@@ -3,6 +3,8 @@ package com.example.returnplus;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -53,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_main);
-
 
 
         //设置选项卡
@@ -110,6 +111,28 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
             //启动意图
             startActivity(intent);
+        }
+        return true;
+    }
+
+    /**
+     * 设置点击两次返回键就结束app进程
+     */
+    long startTime = 0;
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+
+            long current = System.currentTimeMillis();
+            Log.d("MainActivity", "startTime:" + startTime);
+            Log.d("MainActivity", "current:" + current);
+            Log.d("MainActivity", "(startTime - startTime):" + (current - startTime));
+            if (current - startTime < 1500) {
+                finish();
+            } else {
+                startTime = current;
+            }
         }
         return true;
     }

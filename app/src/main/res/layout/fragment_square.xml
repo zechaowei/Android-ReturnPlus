@@ -1,30 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/heart_square">
 
-
-    <Button
-        android:id="@+id/btn_bubble"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/icon_bubble_64"
-        android:layout_alignParentTop="true"/>
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_diary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/icon_diary_64"
-        android:layout_below="@+id/btn_bubble"/>
 
-    <Button
-        android:id="@+id/btn_discussion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/icon_discussion_64"
-        android:layout_alignParentBottom="true"/>
+        <!--左侧的三个按钮-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|left"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
+            tools:ignore="RtlHardcoded">
+            <Button
+                android:id="@+id/btn_bubble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_bubble_64" />
+            <Button
+                android:id="@+id/btn_diary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_diary_64" />
+            <Button
+                android:id="@+id/btn_discussion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_discussion_64" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="9"
+                android:layout_gravity="bottom"
+                android:hint="请输入内容"
+                android:layout_marginBottom="5dp"
+                android:maxLines="1"
+                android:background="@drawable/fragment_send"
+                tools:ignore="NestedWeights" />
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/icon_send"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

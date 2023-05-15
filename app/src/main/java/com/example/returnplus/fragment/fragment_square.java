@@ -1,7 +1,9 @@
 package com.example.returnplus.fragment;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,8 +26,12 @@ public class fragment_square extends Fragment {
     private Button btn_bubble;
     private Button btn_diary;
     private Button btn_discussion;
+    private  Button btn_send;
+
+
     protected Intent intent;
 
+    @SuppressLint("MissingInflatedId")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,11 +41,21 @@ public class fragment_square extends Fragment {
         btn_bubble = view.findViewById(R.id.btn_bubble);
         btn_diary = view.findViewById(R.id.btn_diary);
         btn_discussion = view.findViewById(R.id.btn_discussion);
+        btn_send = view.findViewById(R.id.btn_send);
+
+
 
 
         btn_bubble.setOnClickListener(new BtnOnClickListener());
         btn_diary.setOnClickListener(new BtnOnClickListener());
         btn_discussion.setOnClickListener(new BtnOnClickListener());
+
+        btn_send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("fragment_square","发送成功");
+            }
+        });
 
 
         return view;
