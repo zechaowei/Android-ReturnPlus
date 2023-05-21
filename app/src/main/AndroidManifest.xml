@@ -12,11 +12,13 @@
         android:theme="@style/Theme.ReturnPlus"
         tools:targetApi="31">
         <activity
-            android:name=".Diary3Activity"
-            android:exported="false" />
+            android:name=".diary.Diary3Activity"
+            android:exported="false"
+            android:label="大确幸"/>
         <activity
-            android:name=".Diary2Activity"
-            android:exported="false" />
+            android:name=".diary.Diary2Activity"
+            android:exported="false"
+            android:label="中确幸"/>
         <activity
             android:name=".diary.Diary1Activity"
             android:exported="false"

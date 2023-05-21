@@ -20,7 +20,7 @@
             android:orientation="vertical"
             android:paddingLeft="5dp"
             android:paddingBottom="5dp"
-            tools:ignore="RtlHardcoded">
+            tools:ignore="RtlHardcoded,RtlSymmetry">
             <Button
                 android:id="@+id/btn_bubble"
                 android:layout_width="wrap_content"
@@ -52,10 +52,11 @@
                 android:layout_weight="9"
                 android:layout_gravity="bottom"
                 android:hint="请输入内容"
+                android:paddingStart="15dp"
                 android:layout_marginBottom="5dp"
                 android:maxLines="1"
                 android:background="@drawable/fragment_send"
-                tools:ignore="NestedWeights" />
+                tools:ignore="NestedWeights,RtlSymmetry" />
 
             <Button
                 android:id="@+id/btn_send"
