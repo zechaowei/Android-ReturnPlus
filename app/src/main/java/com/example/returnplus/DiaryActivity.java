@@ -3,10 +3,12 @@ package com.example.returnplus;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,11 +19,15 @@ import com.example.returnplus.diary.Diary1Activity;
 import com.example.returnplus.diary.Diary2Activity;
 import com.example.returnplus.diary.Diary3Activity;
 
+import java.util.Calendar;
+
 public class DiaryActivity extends AppCompatActivity {
 
     private ImageView imageView1;
     private ImageView imageView2;
     private ImageView imageView3;
+
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,18 @@ public class DiaryActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_diary);
 
+        //TODO 展示当前年月日
+        //获取当前日期并格式化
+        final Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR); // 获取当前年份
+        int month = calendar.get(Calendar.MONTH) + 1;// 获取当前月份（注意：Calendar.MONTH 返回值从0开始，因此需要加1）
+        int day = calendar.get(Calendar.DAY_OF_MONTH);// 获取当前月份的日期号码
+
+        //输出格式化后的日期字符串
+        @SuppressLint("DefaultLocale") String date = String.format("%d年%d月%d日",year,month,day);
+        Log.d("DiaryActivity",date);
+
+
         //实现日记页面
         imageView1 = findViewById(R.id.diary_1);
         imageView2 = findViewById(R.id.diary_2);
@@ -43,9 +61,10 @@ public class DiaryActivity extends AppCompatActivity {
         imageView1.setOnClickListener(new ImageViewOnClickListener());
         imageView2.setOnClickListener(new ImageViewOnClickListener());
         imageView3.setOnClickListener(new ImageViewOnClickListener());
+
+        textView = findViewById(R.id.textview_time);
+        textView.setText(date);
     }
-
-
 
     //点击事件
     class ImageViewOnClickListener implements View.OnClickListener{
