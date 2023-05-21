@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--实现日记新增按钮，点击即可增加日记-->
+    <item
+        android:id="@+id/diary_add"
+        app:showAsAction="always|withText"
+        android:orderInCategory="100"
+        android:title="新增日记"
+        android:icon="@drawable/icon_diary_add"/>
+</menu>

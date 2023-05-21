@@ -12,17 +12,27 @@
         android:theme="@style/Theme.ReturnPlus"
         tools:targetApi="31">
         <activity
+            android:name=".Diary3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Diary2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".diary.Diary1Activity"
+            android:exported="false"
+            android:label="小确幸" />
+        <activity
             android:name=".DiscussionActivity"
             android:exported="false"
-            android:label="讨论"/>
+            android:label="讨论" />
         <activity
             android:name=".DiaryActivity"
             android:exported="false"
-            android:label="日记"/>
+            android:label="日记" />
         <activity
             android:name=".BubbleActivity"
             android:exported="false"
-            android:label="泡泡"/>
+            android:label="泡泡" />
         <activity
             android:name=".home.SettingsActivity"
             android:exported="false"

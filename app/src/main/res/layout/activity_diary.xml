@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DiaryActivity">
+    tools:context=".DiaryActivity"
+    android:orientation="vertical"
+    android:padding="5dp">
 
-    <TextView
-        android:id="@+id/tv_diary"
+    <ImageView
+        android:id="@+id/diary_1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="日记广场"
-        android:textSize="40sp" />
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/diary_one"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/diary_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/diary_two"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"/>
+
+    <ImageView
+        android:id="@+id/diary_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/diary_one"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>

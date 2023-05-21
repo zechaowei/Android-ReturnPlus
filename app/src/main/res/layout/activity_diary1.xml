@@ -4,17 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.SignActivity"
-    android:padding="15dp"
-    android:background="@drawable/icon_mascot">
+    tools:context=".diary.Diary1Activity">
 
-    <Button
-        android:id="@+id/btn_sign"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="立即打卡"
-        android:textSize="20sp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/btn_press"/>
-
+        android:text="这是第一个日记页面"
+        android:textSize="30sp"
+        android:gravity="center"/>
 </RelativeLayout>
