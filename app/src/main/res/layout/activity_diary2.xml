@@ -6,11 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".diary.Diary2Activity">
 
-    <TextView
+    <EditText
+        android:id="@+id/editView_time_22"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="这是第二个日记页面"
-        android:textSize="30sp"
-        android:gravity="center"/>
+        android:textColor="#FF0000"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/button_save_22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存"
+        android:background="@drawable/btn_press"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

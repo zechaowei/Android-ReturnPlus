@@ -9,47 +9,72 @@
     android:padding="20dp"
     android:background="#C5D7C0">
 
-    <ImageView
-        android:id="@+id/diary_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/diary_one"/>
-
-    <ImageView
-        android:id="@+id/diary_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/diary_two"
-        android:layout_weight="1"
-        android:layout_marginTop="20dp"/>
-
-    <ImageView
-        android:id="@+id/diary_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/diary_one"
-        android:layout_weight="1"
-        android:layout_marginTop="20dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:background="@color/white"
         android:layout_marginTop="20dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_weight="1">
 
-<!--        点击图片切换当前emoji表情-->
+        <!--        点击图片切换当前emoji表情-->
         <Button
-            android:id="@+id/btn_icon_diary_circle"
+            android:id="@+id/btn_icon_diary_circle_1"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:background="@drawable/emoji_6"
             android:padding="20dp"/>
 
+        <!--        展示日记内容-->
+        <TextView
+            android:id="@+id/diary_edittext_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="显示日记标题内容"/>
+
+        <!--        显示当前时间和日期-->
+        <TextView
+            android:id="@+id/textview_time_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_gravity="right|bottom"
+            tools:ignore="RtlHardcoded"
+            android:paddingRight="100dp"/>
+
+        <Button
+            android:id="@+id/button_enter_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter"
+            android:background="#DDAAFF"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+<!--        点击图片切换当前emoji表情-->
+        <Button
+            android:id="@+id/btn_icon_diary_circle_2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/emoji_5"
+            android:padding="20dp"/>
+
 <!--        展示日记内容-->
-        <EditText
-            android:id="@+id/diary_edittext"
+        <TextView
+            android:id="@+id/diary_edittext_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -57,13 +82,70 @@
 
 <!--        显示当前时间和日期-->
         <TextView
-            android:id="@+id/textview_time"
+            android:id="@+id/textview_time_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_gravity="right|bottom"
-            tools:ignore="RtlHardcoded" />
+            tools:ignore="RtlHardcoded"
+            android:paddingRight="100dp"/>
 
+        <Button
+            android:id="@+id/button_enter_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter"
+            android:background="#DDAAFF"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <!--        点击图片切换当前emoji表情-->
+        <Button
+            android:id="@+id/btn_icon_diary_circle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/emoji_9"
+            android:padding="20dp"/>
+
+        <!--        展示日记内容-->
+        <TextView
+            android:id="@+id/diary_edittext_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="显示日记标题内容"/>
+
+        <!--        显示当前时间和日期-->
+        <TextView
+            android:id="@+id/textview_time_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_gravity="right|bottom"
+            tools:ignore="RtlHardcoded"
+            android:paddingRight="100dp"/>
+
+
+        <Button
+            android:id="@+id/button_enter_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter"
+            android:background="#DDAAFF"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"/>
     </LinearLayout>
 
 </LinearLayout>
