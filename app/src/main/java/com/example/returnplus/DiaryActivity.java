@@ -40,7 +40,11 @@ public class DiaryActivity extends AppCompatActivity {
     private Button mButtonEnter_3;
 
 
-    @SuppressLint("MissingInflatedId")
+    //DiaryActivity中的三个文本框，用于显示文章内容
+    private TextView mTextView1, mTextView2, mTextView3;
+
+
+    @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,6 +111,48 @@ public class DiaryActivity extends AppCompatActivity {
         String content3 = prefs3.getString("content", "");
         long timestamp3 = prefs3.getLong("timestamp", System.currentTimeMillis());
         mTextView_3.setText(formatTimestamp(timestamp3));
+
+
+        /**
+         * 实现日记主页面展示日记部分内容，多余部分用省略号代替
+         */
+        //实现DiaryActivity页面展示日记内容
+        mTextView1 = findViewById(R.id.diary_textview_1);
+        mTextView2 = findViewById(R.id.diary_textview_2);
+        mTextView3 = findViewById(R.id.diary_textview_3);
+
+        // 读取 Diary1Activity 的保存内容并更新对应的 TextView
+        prefs1 = getSharedPreferences("diary1_prefs", MODE_PRIVATE);
+        content1 = prefs1.getString("content", "");
+        if (content1.length() > 10) {
+            mTextView1.setText(content1.substring(0, 10) + "...");
+        } else if (content1.length() > 0) {
+            mTextView1.setText(content1);
+        } else {
+            mTextView1.setText("");
+        }
+
+        // 读取 Diary2Activity 的保存内容并更新对应的 TextView
+        prefs2 = getSharedPreferences("diary2_prefs", MODE_PRIVATE);
+        content2 = prefs2.getString("content", "");
+        if (content2.length() > 10) {
+            mTextView2.setText(content2.substring(0, 10) + "...");
+        } else if (content2.length() > 0) {
+            mTextView2.setText(content2);
+        } else {
+            mTextView2.setText("");
+        }
+
+        // 读取 Diary3Activity 的保存内容并更新对应的 TextView
+        prefs3 = getSharedPreferences("diary3_prefs", MODE_PRIVATE);
+        content3 = prefs3.getString("content", "");
+        if (content3.length() > 10) {
+            mTextView3.setText(content3.substring(0, 10) + "...");
+        } else if (content3.length() > 0) {
+            mTextView3.setText(content3);
+        } else {
+            mTextView3.setText("");
+        }
     }
 
     /**

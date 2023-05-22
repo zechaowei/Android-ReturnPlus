@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".DiaryActivity"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:padding="10dp"
     android:background="#C5D7C0">
 
 
@@ -14,11 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:background="@color/white"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:orientation="vertical"
         android:layout_weight="1">
 
-        <!--        点击图片切换当前emoji表情-->
+        <!--点击图片切换当前emoji表情-->
         <Button
             android:id="@+id/btn_icon_diary_circle_1"
             android:layout_width="80dp"
@@ -26,33 +26,35 @@
             android:background="@drawable/emoji_6"
             android:padding="20dp"/>
 
-        <!--        展示日记内容-->
+        <!--展示日记内容-->
         <TextView
-            android:id="@+id/diary_edittext_1"
+            android:id="@+id/diary_textview_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="显示日记标题内容"/>
+            android:hint="暂无日记"/>
 
-        <!--        显示当前时间和日期-->
+        <!--显示修改保存后的时间和日期-->
         <TextView
             android:id="@+id/textview_time_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_gravity="right|bottom"
-            tools:ignore="RtlHardcoded"
-            android:paddingRight="100dp"/>
+            tools:ignore="RtlHardcoded,RtlSymmetry"
+            android:paddingRight="20dp"/>
 
+        <!--设置进入日记编辑页面-->
         <Button
             android:id="@+id/button_enter_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enter"
-            android:background="#DDAAFF"
+            android:background="#00FB47"
             android:textAllCaps="false"
             android:gravity="center"
-            android:layout_alignParentBottom="true"/>
+            android:layout_gravity="left|bottom"
+            tools:ignore="RtlHardcoded" />
 
     </LinearLayout>
 
@@ -60,11 +62,11 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:background="@color/white"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:orientation="vertical"
         android:layout_weight="1">
 
-<!--        点击图片切换当前emoji表情-->
+        <!--点击图片切换当前emoji表情-->
         <Button
             android:id="@+id/btn_icon_diary_circle_2"
             android:layout_width="80dp"
@@ -72,33 +74,35 @@
             android:background="@drawable/emoji_5"
             android:padding="20dp"/>
 
-<!--        展示日记内容-->
+        <!--展示日记内容-->
         <TextView
-            android:id="@+id/diary_edittext_2"
+            android:id="@+id/diary_textview_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="显示日记标题内容"/>
+            android:hint="暂无日记"/>
 
-<!--        显示当前时间和日期-->
+        <!--显示修改保存后的时间和日期-->
         <TextView
             android:id="@+id/textview_time_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_gravity="right|bottom"
-            tools:ignore="RtlHardcoded"
-            android:paddingRight="100dp"/>
+            tools:ignore="RtlHardcoded,RtlSymmetry"
+            android:paddingRight="20dp"/>
 
+        <!--设置进入日记编辑页面-->
         <Button
             android:id="@+id/button_enter_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enter"
-            android:background="#DDAAFF"
+            android:background="#1AFF00"
             android:textAllCaps="false"
             android:gravity="center"
-            android:layout_alignParentBottom="true"/>
+            android:layout_gravity="left|bottom"
+            tools:ignore="RtlHardcoded" />
 
     </LinearLayout>
 
@@ -106,11 +110,11 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:background="@color/white"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:orientation="vertical"
         android:layout_weight="1">
 
-        <!--        点击图片切换当前emoji表情-->
+        <!--点击图片切换当前emoji表情-->
         <Button
             android:id="@+id/btn_icon_diary_circle"
             android:layout_width="80dp"
@@ -118,34 +122,34 @@
             android:background="@drawable/emoji_9"
             android:padding="20dp"/>
 
-        <!--        展示日记内容-->
+        <!--展示日记内容-->
         <TextView
-            android:id="@+id/diary_edittext_3"
+            android:id="@+id/diary_textview_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="显示日记标题内容"/>
+            android:hint="暂无日记"/>
 
-        <!--        显示当前时间和日期-->
+        <!--显示修改保存后的时间和日期-->
         <TextView
             android:id="@+id/textview_time_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_gravity="right|bottom"
-            tools:ignore="RtlHardcoded"
-            android:paddingRight="100dp"/>
+            tools:ignore="RtlHardcoded,RtlSymmetry"
+            android:paddingRight="20dp"/>
 
-
+        <!--设置进入日记编辑页面-->
         <Button
             android:id="@+id/button_enter_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enter"
-            android:background="#DDAAFF"
+            android:background="#00FF0D"
             android:textAllCaps="false"
-            android:gravity="center"
-            android:layout_alignParentBottom="true"/>
+            android:layout_gravity="left|bottom"
+            tools:ignore="RtlHardcoded" />
     </LinearLayout>
 
 </LinearLayout>
