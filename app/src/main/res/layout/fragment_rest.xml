@@ -1,15 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <TextView
+    <!--游戏页面布局-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="心理小憩"
-        android:textSize="50sp"
-        android:gravity="center"
-        android:background="#02FA54"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/cloud_128"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights,Suspicious0dp">
+
+            <ImageView
+                android:id="@+id/rest_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/game_128"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="游戏"
+                android:textSize="40sp"
+                android:layout_gravity="center"
+                android:fontFamily="serif" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/rest_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进入游戏"
+            android:background="@drawable/btn_press"
+            android:layout_gravity="bottom|right"
+            tools:ignore="RtlHardcoded"
+            android:onClick="onButtonClick1"/>
+
+    </LinearLayout>
+
+    <!--音乐布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#AAFFDD"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights,Suspicious0dp">
+
+            <ImageView
+                android:id="@+id/rest_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/music_128"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="音乐"
+                android:textSize="40sp"
+                android:layout_gravity="center"
+                android:fontFamily="serif"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/rest_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进入音乐"
+            android:background="@drawable/btn_press"
+            android:layout_gravity="bottom|right"
+            tools:ignore="RtlHardcoded"
+            android:onClick="onButtonClick2"/>
+
+    </LinearLayout>
+
+
+    <!--冥想页面-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#DDAAFF"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights,Suspicious0dp">
+
+            <ImageView
+                android:id="@+id/rest_thinking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/thinking_128"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="冥想"
+                android:textSize="40sp"
+                android:fontFamily="serif"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/rest_btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进入冥想"
+            android:background="@drawable/btn_press"
+            android:layout_gravity="bottom|right"
+            tools:ignore="RtlHardcoded"
+            android:onClick="onButtonClick3"/>
+
+    </LinearLayout>
 
 </LinearLayout>
