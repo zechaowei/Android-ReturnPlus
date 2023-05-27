@@ -25,6 +25,7 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         //设置选项卡
         tabLayout = findViewById(R.id.tab);
+        //获取ViewPager组件
         viewPager = findViewById(R.id.viewPager);
 
         //填充选项内容
@@ -74,6 +76,12 @@ public class MainActivity extends AppCompatActivity {
 
         //FragmentManager用于Fragment 什么时候开始展示，什么时候开始销毁
         viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager()));
+
+        //添加选项卡及对应的图标
+        Objects.requireNonNull(tabLayout.getTabAt(0)).setIcon(R.drawable.icon_heart);
+        Objects.requireNonNull(tabLayout.getTabAt(1)).setIcon(R.drawable.icon_cap);
+        Objects.requireNonNull(tabLayout.getTabAt(2)).setIcon(R.drawable.icon_heart_128);
+        Objects.requireNonNull(tabLayout.getTabAt(3)).setIcon(R.drawable.icon_envelope_48);
     }
 
 

@@ -73,7 +73,7 @@ public class fragment_rest extends Fragment {
         startActivity(intent);
     }
     public void onButtonClick3(View view){
-        String url = "https://www.jd.com/";   //指定要跳转的网页URL
+        String url = "https://www.smilingmind.com.au/";   //指定要跳转的网页URL
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
     }
