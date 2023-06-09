@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     List<Fragment> fragments = new ArrayList<>();
-    String tabTitles[] = {"心间广场", "心理咨询", "心理知识", "心理小憩"};
+    String tabTitles[] = {"心间广场", "心理知识", "心理咨询", "心理小憩"};
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,7 +107,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         //关联之后的TabLayout中题目(Item)，有ViewPager的适配器方法getPageTitle提供
         public CharSequence getPageTitle(int position) {
-            return tabTitles[position];
+            return tabTitles[position];     //展示导航栏文字
+//            return "";                //不展示导航栏文字
         }
     }
 

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home.HomeActivity"
-    android:background="@drawable/icon_mascot">
+    >
+<!--    android:background="@drawable/icon_mascot"设置背景颜色-->
 
     <ListView
         android:id="@+id/lv_home"
