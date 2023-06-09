@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 第一个区域 -->
+    <RelativeLayout
+        android:id="@+id/first_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <!-- 在顶部放置 TextView -->
+        <TextView
+            android:id="@+id/textView_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="热门主播"
+            android:textColor="#61A51D"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- 在底部放置四个等长大小的 ImageView-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_video"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/video_persons_1" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/video_persons_2" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/video_persons_3" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/video_persons_4" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
