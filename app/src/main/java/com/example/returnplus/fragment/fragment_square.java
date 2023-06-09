@@ -48,8 +48,6 @@ public class fragment_square extends Fragment {
         mEditText = view.findViewById(R.id.mEditText);
 
 
-
-
         btn_bubble.setOnClickListener(new BtnOnClickListener());
         btn_diary.setOnClickListener(new BtnOnClickListener());
         btn_discussion.setOnClickListener(new BtnOnClickListener());
