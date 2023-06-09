@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,6 +28,7 @@ public class fragment_square extends Fragment {
     private Button btn_diary;
     private Button btn_discussion;
     private  Button btn_send;
+    private EditText mEditText;
 
 
     protected Intent intent;
@@ -41,7 +43,9 @@ public class fragment_square extends Fragment {
         btn_bubble = view.findViewById(R.id.btn_bubble);
         btn_diary = view.findViewById(R.id.btn_diary);
         btn_discussion = view.findViewById(R.id.btn_discussion);
+
         btn_send = view.findViewById(R.id.btn_send);
+        mEditText = view.findViewById(R.id.mEditText);
 
 
 
@@ -56,7 +60,6 @@ public class fragment_square extends Fragment {
                 Log.d("fragment_square","发送成功");
             }
         });
-
 
         return view;
     }
